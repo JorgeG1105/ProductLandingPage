@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open-Sans', sans-serif;
+}
+/*-----------------Navigation Styling-----------------------*/
+nav, ul, .title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    font-family: 'Allan', cursive;
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+nav i {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 10px;
+}
