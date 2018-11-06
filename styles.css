@@ -7,10 +7,45 @@
 html {
     font-family: 'Open-Sans', sans-serif;
 }
+
+li {
+    list-style: none;
+}
 /*-----------------Navigation Styling-----------------------*/
-nav, ul, .title {
+
+#nav-bar, ul, .title {
     display: flex;
     align-items: center;
+}
+
+#nav-bar {
+    background-color: #191919;
+}
+
+#nav-bar ul {
+    margin-left: auto;
+}
+
+#nav-bar li {
+    transition: color .2s ease-in-out;
+}
+
+#nav-bar li:hover {
+    color: white;
+}
+
+#nav-bar i {
+    margin: 10px;
+}
+
+#nav-bar .nav-link {
+    text-decoration: none;
+    margin: 10px;
+    color: #9B9B9B;
+}
+
+.title {
+    color: #CF00BB;
 }
 
 .title h1 {
@@ -18,15 +53,13 @@ nav, ul, .title {
     font-size: 30px;
 }
 
-li {
-    list-style: none;
+/*---------------------Microphone Image Carousel Styles-------------------*/
+
+.mic-carousel {
+    text-align: center;
 }
 
-nav i {
-    margin: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    margin: 10px;
+.carousel-img {
+    width: 400px;
+    height: 400px;
 }
