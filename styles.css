@@ -16,6 +16,33 @@ body {
 #nav-bar li {
     list-style: none;
 }
+
+/*-----------------Hamburger Styling------------------------*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: red;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 /*-----------------Navigation Styling-----------------------*/
 
 #nav-bar, .nav-ul, .title {
@@ -25,6 +52,9 @@ body {
 
 #nav-bar {
     background-color: #191919;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #nav-bar .nav-ul {
@@ -70,7 +100,7 @@ body {
 .carousel-img {
     width: 400px;
     height: 400px;
-    margin: 50px;
+    margin: 70px 50px 50px 50px;
 }
 
 .carousel-text {
@@ -97,8 +127,14 @@ body {
     display: flex;
     color: white;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 250px;
     color: #9B9B9B;
+    background-color: #191919;
+}
+
+.img-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .features-wrapper ul {
@@ -116,3 +152,146 @@ body {
 .one li, .two li, .three li {
     margin: 10px;
 }
+
+/*------------------Contact form section styling------------------*/
+
+.contactFormContainer {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contactFormContainer h2 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#form {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 350px;
+}
+
+h2 {
+    color: red;
+}
+
+label {
+    color: #9B9B9B;
+}
+
+/*------------------------------------Footer Styles-----------------------------*/
+footer {
+    background-color: #191919;
+    padding: 40px 20px 40px 20px;
+    text-align: center;
+    color: #9B9B9B;
+}
+
+
+/*---------------------------------Media Queries------------------------*/
+
+@media all and (min-width: 375px) and (max-width: 812px) {
+
+
+        .hamburger {
+            display: initial;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            margin-right: 10px;
+        }
+
+        #nav-bar {
+            display: none;
+            padding: 0;
+            position: initial;
+        }
+
+        #nav-bar li {
+            margin: 15px;
+        }
+
+        #nav-bar, .nav-ul, .title {
+            flex-direction: column;
+        }
+
+        .toggleDisplay {
+            display: block!important;
+        }
+
+    /*---------------------Carousel section---------------*/
+    .carousel-img {
+        width: 300px;
+        height: 300px;
+        margin: 200px 50px 50px 50px;
+    }
+
+    .img-title {
+        padding: 10px;
+    }
+
+    .img-info {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /*-------------------Features section--------------------*/
+
+    .features-wrapper {
+        margin-top: 150px;
+        flex-direction: column;
+    }
+
+    .one, .two, .three {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*--------------------Contact section--------------------*/
+    .contactFormContainer {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+
+    /*--------------------Media Queries----------------------*/
+
+    @media all and (max-width: 812px) and (orientation: landscape) {
+
+        .hamburger {
+            display: initial;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            margin-right: 10px;
+        }
+
+        #nav-bar {
+            display: none;
+            padding: 0;
+            position: initial;
+        }
+
+        .carousel-img {
+            margin: 100px 50px 50px 50px;
+        }
+
+        .features-wrapper {
+            margin-top: 100px;
+        }
+
+        .toggleDisplay {
+            display: block!important;
+        }
+    }

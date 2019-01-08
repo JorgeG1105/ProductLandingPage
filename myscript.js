@@ -1,3 +1,4 @@
+//Carousel JS
 let startPoint = 0;
 const images = [];
 let time = 10000;
@@ -33,5 +34,15 @@ function changeImg() {
 
 	setTimeout("changeImg()", time);
 }
+
+//Hamburger icon JS
+let hamburger = document.querySelector(".hamburger");
+let navbar = document.querySelector("#nav-bar");
+
+/*---This will trigger the hamburger to change when clicked in mobile mode--*/
+hamburger.addEventListener("click", function(){
+	this.classList.toggle("change");
+	navbar.classList.toggle("toggleDisplay");
+});
 
 window.onload = changeImg;
