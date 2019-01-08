@@ -2,8 +2,11 @@
 <html lang='en'>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>JG | Product Landing Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jorge Goris">
+        <meta name="description" content="Part of FreeCodeCamps projects, A product landing page for a fake company selling gaming headphones.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Headphones, Responsive, Design, Gaming">
+        <title>JG | Product Landing Page Project</title>
         <!--Font Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
         <!--Google Fonts-->
@@ -13,6 +16,11 @@
     </head>
     <body>
         <header id='header'>
+            <div class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <nav id='nav-bar'>
                 <div class="title">
                     <div id='header-img'>
@@ -22,20 +30,20 @@
                     <h1>Pinnacle Streamer</h1>
                 </div>
                 <ul class="nav-ul">
-                    <a href="#" class="nav-link"><li>Info</li></a>
-                    <a href="#" class="nav-link"><li>Features</li></a>
-                    <a href="#" class="nav-link"><li>Contact Us</li></a>
+                    <a href="#images" class="nav-link"><li>Info</li></a>
+                    <a href="#features" class="nav-link"><li>Features</li></a>
+                    <a href="#contact" class="nav-link"><li>Contact Us</li></a>
                 </ul>
             </nav>
         </header>
-        <div class="mic-carousel">
+        <div class="mic-carousel" id = 'images'>
             <img class="carousel-img" name="slide" alt="Various pictures of gaming headsets.">
         </div>
         <div class="carousel-text">
             <h1 class="img-title"></h1>
             <p class="img-info"></p>
         </div>
-        <div class="features-wrapper">
+        <div class="features-wrapper" id="features">
             <div class="one">
                 <h1 class="img-title">G2000 Pro</h1>
                 <iframe id='video1' width="300" height="350" src="https://www.youtube.com/embed/RPdNfJ667Lk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -60,7 +68,7 @@
             </div>
             <div class="three">
                 <h1 class="img-title">ROG Strix Wireless</h1>
-                <iframe width="300" height="350" src="https://www.youtube.com/embed/Sz_Uo9iBQQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id='video3' width="300" height="350" src="https://www.youtube.com/embed/Sz_Uo9iBQQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <ul>
                     <li>Low-latency 2.4 GHz wireless connection with dual-antenna design to minimize interference. Connectivity Technology: Wireless</li>
                     <li>Connects wirelessly to PC & PlayStation 4 and includes 3.5 mm adapter Xbox One, older consoles and mobile devices</li>
@@ -70,6 +78,21 @@
                 </ul>
             </div>
         </div>
+        <div class="contactFormContainer" id="contact">
+            <h2>Contact Us!</h2>
+            <form id="form" action='https://www.freecodecamp.com/email-submit'>
+                <input type="text" name="name" placeholder="Name">
+
+                <input type="text" name="phone" placeholder="Phone">
+
+                <input type="email" name="email" placeholder="Please enter your email address" required>
+
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <footer>
+            <p>Copyright &copy; Jorge Goris 2018<p>
+        </footer>
         <!--Custom Script-->
         <script type="text/javascript" src="myscript.js"></script>
     </body>
